@@ -29,6 +29,24 @@ def is_branch_open(begin_time, end_time, check_time=None):
 # Sets begin_time and end_time and then returns a boolean
 print("Is the Portland branch open?", is_branch_open(time(9,0), time(17,0)))
 
+def is_branch_open2(begin_time, end_time, check_time=None):
+    check_time = n_time.time()
+    if begin_time < end_time:
+        return check_time >= begin_time and check_time <= end_time
+    else:
+        return check_time >= begin_time or check_time <= end_time
+
+print("Is the New York City branch open?", is_branch_open2(time(9,0), time(17,0)))
+
+def is_branch_open3(begin_time, end_time, check_time=None):
+    check_time = l_time.time()
+    if begin_time < end_time:
+        return check_time >= begin_time and check_time <= end_time
+    else:
+        return check_time >= begin_time or check_time <= end_time
+
+print("Is the London branch open?", is_branch_open3(time(9,0), time(17,0)))
+
 
 # Portland = US/Pacific
 # NYC = US/Eastern
