@@ -45,12 +45,6 @@ def end_directory():
 # time() works with seconds, so we need to get the seconds in 24 hours
 Seconds_in_day = 24 * 60 * 60
 
-# Set where the source of the files are
-source = '{}'.format(e1.get())
-
-# Set the destination path to 
-destination = '{}'.format(e2.get())
-
 # Sets the current time as a floating point number
 now = time.time()
 
@@ -70,7 +64,7 @@ def moveFiles():
     for i in source_files:
         file_path = os.path.join(source, i)
 
-        if i.endswith('.txt') and last_mod_time(file_path) > before:
+        if last_mod_time(file_path) > before:
             shutil.move(source + '/' + i, destination)
             print (i + " File transfer successful!")
         else:
