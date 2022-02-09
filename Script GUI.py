@@ -18,6 +18,7 @@ e1.grid(row=0, column=1, columnspan=3, padx=(15,0), pady=(10,0), sticky=EW)
 e2 = Entry(text="")
 e2.grid(row=1, column=1, columnspan=3, padx=(15,0), pady=(10,0), sticky=EW)
 
+
 # center window to user's screen
 def center_window(w, h): # pass in the w and h
         # get user's screen width and height
